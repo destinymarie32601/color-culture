@@ -1,15 +1,8 @@
 import React from 'react';
-import NavTabs from './components/NavTabs';
+import ColorContainer from './components/Colorcontainer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 
-function App() {
-function handlePageChange(page) {
-  // Your code to handle the page change event
-  console.log('Page changed:', page);
-}
-  return (<div className="App">
-  <NavTabs currentPage="Home" handlePageChange={handlePageChange} />
-</div>);
-}
+const App = () => <ColorContainer />;
 
 export default App;

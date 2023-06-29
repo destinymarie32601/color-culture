@@ -1,3 +1,21 @@
+.about-header {
+    color: lightblue;
+    margin: 20px;
+}
+
+.about-body {
+    color: lightblue;
+    margin: 20px;
+}
+
+.about-cards {
+    margin: 100px;
+}
+
+.card-img {
+    max-width: 70%;
+}
+
 .nav-wrapper {
     display: flex;
     justify-content: center;
