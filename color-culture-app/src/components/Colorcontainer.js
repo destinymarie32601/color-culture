@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Home from "./pages/Home";
-import Nav from "./pages/";
+import NavTabs from "./NavTabs";
 import Profile from "./pages/";
 import Login from "./pages/";
 // TODO : finish imports and container function

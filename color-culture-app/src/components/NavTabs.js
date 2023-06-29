@@ -3,9 +3,6 @@ import customHomeIcon from './pages/images/logoicon.jpg';
 
 function NavTabs({ currentPage, handlePageChange}) {
     return (
-        <div className="nav-wrapper">
-
-        
         <ul className= "nav nav-tabs">
             <li className = "nav-items">
                 <a 
@@ -15,7 +12,7 @@ function NavTabs({ currentPage, handlePageChange}) {
                 className = {currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
 
                 >
-                        <img className= "home-icon" src={customHomeIcon} alt="Home Icon"/>
+                        <img src={customHomeIcon} alt="Home Icon"/>
 
                 </a>
             </li>
@@ -60,16 +57,17 @@ function NavTabs({ currentPage, handlePageChange}) {
                 </a>
             </li>
             <li className="nav-item">
-               <div className="search-container">
-                <input type = "text" placeholder="Search for an artist..."/>
-                <button className="search-button" onClick={() => handlePageChange('Search')}>
+                <a
+                href="#search"
+                onClick={() => handlePageChange('Search')}
+
+                className={currentPage === 'Search' ? 'nav-link active' : 'nav-link'}
+                >
                     Search
-                </button>
-                </div>
+                </a>
             </li>
 
         </ul>
-        </div>
     );
 }
 
