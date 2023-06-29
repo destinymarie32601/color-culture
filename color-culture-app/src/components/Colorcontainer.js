@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Home from "./pages/Home";
-import Nav from "./pages/";
-import Profile from "./pages/";
-import Login from "./pages/";
+import NavTabs from "./NavTabs";
+//import Profile from "./pages/";
+//import Login from "./pages/";
+import About from "./pages/About";
 // TODO : finish imports and container function
 
 export default function ColorContainer() {
@@ -13,20 +14,24 @@ export default function ColorContainer() {
       return <Home />;
     }
 
-    if (currentPage === "Profile") {
-      return <Profile />;
+    //if (currentPage === "Profile") {
+     // return <Profile />;
+    //}
+
+    if (currentPage === "About") {
+      return <About />;
     }
 
-    if (currentPage === "Login") {
-      return <Login />;
-    }
+    //if (currentPage === "Login") {
+    //  return <Login />;
+    //}
     // TODO : add more pages as needed
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
   return (
     <div>
-      <nav currentPage={currentPage} handlePageChange={handlePageChange} />
+      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
     </div>
   );

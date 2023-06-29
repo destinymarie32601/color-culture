@@ -1,7 +1,7 @@
 import React from 'react';
 import customHomeIcon from './pages/images/logoicon.jpg';
 
-function NavTabs({ currentPage, handlePage}) {
+function NavTabs({ currentPage, handlePageChange}) {
     return (
         <ul className= "nav nav-tabs">
             <li className = "nav-items">
@@ -12,7 +12,7 @@ function NavTabs({ currentPage, handlePage}) {
                 className = {currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
 
                 >
-                        <img src={customHomeIcon} alt="Home Icon"/>
+                    <img src='#' alt="Home Icon"/>
 
                 </a>
             </li>
