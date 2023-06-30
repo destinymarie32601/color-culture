@@ -3,9 +3,6 @@ import customHomeIcon from './pages/images/logoicon.jpg';
 
 function NavTabs({ currentPage, handlePageChange}) {
     return (
-        <div className="nav-wrapper">
-
-        
         <ul className= "nav nav-tabs">
             <li className = "nav-items">
                 <a 
@@ -41,12 +38,12 @@ function NavTabs({ currentPage, handlePageChange}) {
             </li>
             <li className="nav-item">
                 <a 
-                href="#signin"
-                onClick={() => handlePageChange('Sign In')}
+                href="#login"
+                onClick={() => handlePageChange('Login')}
 
-                className={currentPage === 'Sign In' ? 'nav-link active' : 'nav-link'}
+                className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}
                 >
-                    Sign In
+                    Login
                 </a>
             </li>
             <li className="nav-item">
@@ -60,16 +57,17 @@ function NavTabs({ currentPage, handlePageChange}) {
                 </a>
             </li>
             <li className="nav-item">
-               <div className="search-container">
-                <input type = "text" placeholder="Search for an artist..."/>
-                <button className="search-button" onClick={() => handlePageChange('Search')}>
+                <a
+                href="#search"
+                onClick={() => handlePageChange('Search')}
+
+                className={currentPage === 'Search' ? 'nav-link active' : 'nav-link'}
+                >
                     Search
-                </button>
-                </div>
+                </a>
             </li>
 
         </ul>
-        </div>
     );
 }
 

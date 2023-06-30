@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Home from "./pages/Home";
 import NavTabs from "./NavTabs";
 //import Profile from "./pages/";
-//import Login from "./pages/";
+import Login from "./pages/Login";
 import About from "./pages/About";
 import Footer from "./Footer";
 // TODO : finish imports and container function
@@ -23,9 +23,10 @@ export default function ColorContainer() {
       return <About />;
     }
 
-    //if (currentPage === "Login") {
-    //  return <Login />;
-    //}
+    if (currentPage === "Login") {
+     return <Login />;
+    }
+
     // TODO : add more pages as needed
   };
 
