@@ -12,7 +12,7 @@ function NavTabs({ currentPage, handlePageChange}) {
                 className = {currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
 
                 >
-                        <img src={customHomeIcon} alt="Home Icon"/>
+                        <img className="home-icon" src={customHomeIcon} alt="Home Icon"/>
 
                 </a>
             </li>
