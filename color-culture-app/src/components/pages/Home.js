@@ -12,7 +12,7 @@ export default function Home() {
                     <img
                         className="d-block w-100"
                         src={cityArt}
-                        alt="Image One"
+                        alt="One"
                     />
                     <Carousel.Caption>
                         <h3>Label for first slide</h3>
@@ -23,7 +23,7 @@ export default function Home() {
                     <img
                         className="d-block w-100"
                         src={treeArt}
-                        alt="Image Two"
+                        alt="Two"
                     />
                     <Carousel.Caption>
                         <h3>Label for second slide</h3>
