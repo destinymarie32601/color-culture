@@ -4,6 +4,7 @@ import NavTabs from "./NavTabs";
 //import Profile from "./pages/";
 //import Login from "./pages/";
 import About from "./pages/About";
+import Footer from "./Footer";
 // TODO : finish imports and container function
 
 export default function ColorContainer() {
@@ -33,6 +34,7 @@ export default function ColorContainer() {
     <div>
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
+      <Footer />
     </div>
   );
 }
