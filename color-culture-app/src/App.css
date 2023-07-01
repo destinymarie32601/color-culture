@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 * {
     background-color: whitesmoke;
 }
@@ -5,15 +7,20 @@
 .about-header {
     color: lightblue;
     margin: 10px;
+    font-family: 'Poppins';
 }
 
 .about-body {
     color: lightblue;
     margin: 20px;
+    font-family: 'Poppins';
+
 }
 
 .about-cards {
     margin: 100px;
+    font-family: 'Poppins';
+
 }
 
 
@@ -78,26 +85,60 @@
 }
 .nav-item .nav-link{
     color:rgb(13, 9, 9);
+    font-family: 'Poppins';
 }
 .search-container{
     display:flex;
-    align-items: center;
+    justify-content: center;
     border-radius: 0px;
-    margin: 7px 10px;
 }
 .search-container input{
-    width:147px;
+    width:700px;
+    height:40px;
     border-radius: 10px;
     border: 1px white;
+    font-family: 'Poppins';
+    
+
 }
-.search-button{
-    padding: 1px 10px;
-    border-radius: 10px;
-    border: 1px white;
-    background-color: white;
-    width:70px;
-    margin-left: 10px;
+.search-bar{
+   
+    font-family: 'Poppins';
+
+
 }
+.description h2{
+    font-family: 'Poppins';
+    display:flex;
+    justify-content: center;
+
+}
+.description p{
+    font-family: 'Poppins';
+    display:flex;
+    justify-content: center;
+}
+.art-photos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+  
+}
+.art-photo{
+    margin:10px;
+    text-align: center;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+.art-photo p{
+    margin-top: 100px;
+    text-align: center;
+}
+
+
 
 .footer {
     background-color: gray;
