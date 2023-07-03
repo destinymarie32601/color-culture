@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Home from "./pages/Home";
 import NavTabs from "./NavTabs";
-//import Profile from "./pages/";
+import Profile from "./pages/Profile";
 //import Login from "./pages/";
 import About from "./pages/About";
 // TODO : finish imports and container function
@@ -14,9 +14,9 @@ export default function ColorContainer() {
       return <Home />;
     }
 
-    //if (currentPage === "Profile") {
-     // return <Profile />;
-    //}
+    if (currentPage === "Profile") {
+      return <Profile />;
+    }
 
     if (currentPage === "About") {
       return <About />;
