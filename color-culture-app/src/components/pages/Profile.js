@@ -114,7 +114,7 @@ function Tabs() {
         </div>
       </div>
       <div className="portfolio">
-        <h1 className="h1"></h1>
+        <h1 className="h1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h1>
       </div>
     </div>
   );
