@@ -32,7 +32,9 @@ function Tabs() {
                 Contact
               </a>
             </p>
+
             <h2>My Work</h2>
+            
             <div style={{ display: "flex", width: 1000, padding: 40 }}>
               <Carousel>
                 <Carousel.Item interval={10000}>
@@ -50,7 +52,9 @@ function Tabs() {
               </Carousel>
             </div>
           </div>
+          
         </div>
+        
       </div>
       <div className="price-container">
         <div className="price-tabs">
