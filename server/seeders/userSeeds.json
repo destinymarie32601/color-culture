@@ -1,0 +1,17 @@
+[
+    {
+        "username": "TheFirstArtist",
+        "email": "tom1@gmail.com",
+        "password": "password123"
+    },
+    {
+        "username": "UnlimitedArtworks",
+        "email": "bob2@gmail.com",
+        "password": "password456"
+    },
+    {
+        "username": "SamMart",
+        "email": "sam3@gmail.com",
+        "password": "password789"
+    }
+]
