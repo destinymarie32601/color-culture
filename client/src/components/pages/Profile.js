@@ -150,7 +150,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <a href="https://google.com">
-                <Button variant="outline-info">Add to Cart</Button>
+                <Button variant="outline-Primary">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
@@ -165,7 +165,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <a href="https://www.google.com">
-                <Button variant="outline-info">Add to Cart</Button>
+                <Button variant="outline-Primary">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
@@ -180,7 +180,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <a href="https://www.google.com">
-                <Button variant="outline-info">Add to Cart</Button>
+                <Button variant="outline-Primary">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
@@ -195,7 +195,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Titlee</Card.Title>
               <a href="https://www.google.com">
-                <Button variant="outline-info">Add to Cart</Button>
+                <Button variant="outline-primary">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
