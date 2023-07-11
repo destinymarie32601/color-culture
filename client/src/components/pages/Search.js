@@ -2,7 +2,7 @@ import React from "react";
 import artistone from "./images/artistnum1.jpg";
 import artisttwo from "./images/artistnum2.jpg";
 
-export default function About() {
+export default function Search() {
     return (
         <div className="container">
         <div className="description">

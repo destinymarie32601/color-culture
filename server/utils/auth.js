@@ -6,7 +6,7 @@ const expiration = '2h';
 
 module.exports = {
     // Function for our authenticated routes
-    authMiddleware: function (req, res, next) {
+    /*authMiddleware: function (req, res, next) {
         // Allows token to be sent via req.query or headers
         let token = req.query.token || req.headers.authorization;
 
@@ -29,7 +29,7 @@ module.exports = {
 
         // Send to next endpoint
         next();
-    },
+    },*/
     signToken: function ({ username, email, _id }) {
         const payload = { username, email, _id };
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Tab from 'react-bootstrap/Tab';
@@ -7,54 +8,86 @@ import { useMutation } from '@apollo/client';
 import { LOGIN_USER, ADD_USER } from '../../utils/mutation';
 import Auth from '../../utils/auth';
 
-export default function Login() {
-    const [username, setUsername] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+const Login = (props) => {
+    //const [username, setUsername] = useState('');
+    //const [email, setEmail] = useState('');
+    //const [password, setPassword] = useState('');
     const [activeTab, setActiveTab] = useState('login');
-    const [loginUser] = useMutation(LOGIN_USER);
-    const [signupUser] = useMutation(ADD_USER);
+    const [login] = useMutation(LOGIN_USER);
+    const [addUser] = useMutation(ADD_USER);
+    const [loginState, setLoginState] = useState({ email: '', password: ''});
+    const [signupState, setSignupState] = useState({ email: '', password: '', username: ''});
 
-    function validateLoginForm() {
-        return username.length > 0 && password.length > 5;
-    }
+    const handleloginChange = (event) => {
+        const { name, value } = event.target;
 
-    function validateSignUpForm() {
-        return username.length > 0 && password.length > 5;
-    }
+        setLoginState({
+            ...loginState,
+            [name]: value,
+        });
+    };
+
+    const handlesignupChange = (event) => {
+        const { name, value } = event.target;
+
+        setSignupState({
+            ...signupState,
+            [name]: value,
+        });
+    };
+    //function validateLoginForm() {
+    //   return username.length > 0 && password.length > 5;
+    //}
+
+    //function validateSignUpForm() {
+    //    return username.length > 0 && password.length > 5;
+    //}
 
     async function handleLoginSubmit(event) {
         event.preventDefault();
-        if (validateLoginForm()) {
+        console.log(loginState);
+        //if (validateLoginForm()) {
             try {
-                const { data } = await loginUser({
-                    variables: { username, password },
+                const { data } = await login({
+                    variables: { ...loginState },
                 });
-                const token = data.login.token;
-                Auth.login(token);
+               
+                Auth.login(data.login.token);
                 console.log('Login successful!');
             } catch (error) {
                 console.log('Invalid login credentials');
             }
-        }
-    }
+        //}
+
+        setLoginState({
+            email: '',
+            password: '',
+        });
+    };
 
 
     async function handleSignUpSubmit(event) {
         event.preventDefault();
-        if (validateSignUpForm()) {
+        console.log(signupState);
+        //if (validateSignUpForm()) {
             try {
-                const { data } = await signupUser({
-                    variables: { username, email, password },
+                const { data } = await addUser({
+                    variables: { ...signupState },
                 });
-                const token = data.signup.token;
-                Auth.login(token);
+                
+                Auth.login(data.addUser.token);
                 console.log('Sign up successful!');
             } catch (error) {
                 console.log('Invalid sign-up');
             }
-        }
-    }
+        //}
+
+        setSignupState({
+            email: '',
+            password: '',
+            username: '',
+        });
+    };
 
     function handleTabSelect(tab) {
         setActiveTab(tab);
@@ -90,23 +123,25 @@ export default function Login() {
                         <Tab.Pane eventKey='login'>
                             <Form onSubmit={handleLoginSubmit}>
                                 <Form.Group size='lg' controlId='username'>
-                                    <Form.Label>Username</Form.Label>
+                                    <Form.Label>Email</Form.Label>
                                     <Form.Control
                                         autoFocus
+                                        name='email'
                                         type='text'
-                                        value={username}
-                                        onChange={(e) => setUsername(e.target.value)}
+                                        value={loginState.email}
+                                        onChange={handleloginChange}
                                     />
                                 </Form.Group>
                                 <Form.Group size='lg' controlId='password'>
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
+                                        name='password'
                                         type='password'
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
+                                        value={loginState.password}
+                                        onChange={handleloginChange}
                                     />
                                 </Form.Group>
-                                <Button size='lg' type='submit' disabled={!validateLoginForm()} style={{ marginTop: '20px', marginBottom: '20px' }}>
+                                <Button size='lg' type='submit' style={{ marginTop: '20px', marginBottom: '20px' }}>
                                     Login
                                 </Button>
                             </Form>
@@ -117,28 +152,31 @@ export default function Login() {
                                     <Form.Label>Username</Form.Label>
                                     <Form.Control
                                         autoFocus
+                                        name='username'
                                         type='text'
-                                        value={username}
-                                        onChange={(e) => setUsername(e.target.value)}
+                                        value={signupState.username}
+                                        onChange={handlesignupChange}
                                     />
                                 </Form.Group>
                                 <Form.Group size='lg' controlId='email'>
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control
+                                        name='email'
                                         type='email'
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
+                                        value={signupState.email}
+                                        onChange={handlesignupChange}
                                     />
                                 </Form.Group>
                                 <Form.Group size='lg' controlId='password'>
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
+                                        name='password'
                                         type='password'
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
+                                        value={signupState.password}
+                                        onChange={handlesignupChange}
                                     />
                                 </Form.Group>
-                                <Button size='lg' type='submit' disabled={!validateSignUpForm()} style={{ marginTop: '20px', marginBottom: '20px' }}>
+                                <Button size='lg' type='submit' style={{ marginTop: '20px', marginBottom: '20px' }}>
                                     Sign Up
                                 </Button>
                             </Form>
@@ -148,4 +186,55 @@ export default function Login() {
             </div>
         </div >
     );
+    /*return (
+        <main className="flex-row justify-center mb-4">
+          <div className="col-12 col-lg-10">
+            <div className="card">
+              <h4 className="card-header bg-dark text-light p-2">Login</h4>
+              <div className="card-body">
+                {data ? (
+                  <p>
+                    Success! You may now head{' '}
+                    <Link to="/">back to the homepage.</Link>
+                  </p>
+                ) : (
+                  <form onSubmit={handleLoginSubmit}>
+                    <input
+                      className="form-input"
+                      placeholder="Your email"
+                      name="email"
+                      type="email"
+                      value={formState.email}
+                      onChange={handleChange}
+                    />
+                    <input
+                      className="form-input"
+                      placeholder="******"
+                      name="password"
+                      type="password"
+                      value={formState.password}
+                      onChange={handleChange}
+                    />
+                    <button
+                      className="btn btn-block btn-info"
+                      style={{ cursor: 'pointer' }}
+                      type="submit"
+                    >
+                      Submit
+                    </button>
+                  </form>
+                )}
+    
+                {error && (
+                  <div className="my-3 p-3 bg-danger text-white">
+                    {error.message}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </main>
+      );*/
 }
+
+export default Login;

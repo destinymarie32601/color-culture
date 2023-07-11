@@ -18,7 +18,7 @@ export default function About() {
                             <div className="card-body">
                                 <h5 className="about-title">About Alfredo Jimenez</h5>
                                 <p className="about-text">Hello! My name is Alfredo Jimenez. I was born in Houston,Texas but moved to North Carolina when I was 13 years old.
-                                    I would say my hobbies are taking care of my cat, cars, trying new food and video games. I enlisted in the US Army Reserves
+                                    I would say my hobbies are taking care of my cat, car, trying new food and video games. I enlisted in the US Army Reserves
                                     in 2017 as a 12N(Horizontal Construction Engineer). I spent a year in Africa helping expending and maintaining the base. I
                                     have worked at Sams Xpress Car Wash as a crew member and now as a assistant manager where I am in charge of maintaining the
                                     wash. I took the UNCC Full-Stack Web Developer bootcamp in 2023 were we learned HTML, CSS, JavaScript, APIs, MySQL, Handlebars,
