@@ -1,9 +1,10 @@
 import { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
-
-import stock from "../../assets/images/profile-stock.jpeg";
-import caro1 from "../../assets/images/caro-pic2_208x295.jpeg";
-import caro3 from "../../assets/images/caro-pic3.jpeg";
+import { Button, Card, Row, Col, Image } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import art from "../../assets/images/art.jpg";
+import art1 from "../../assets/images/art1.JPG";
+import art2 from "../../assets/images/art2.jpg";
+import art3 from "../../assets/images/art3.JPG";
 
 function Tabs() {
   const [toggleState, setToggleState] = useState(1);
@@ -13,109 +14,182 @@ function Tabs() {
   };
 
   return (
-    <div className="bio">
-      <div className="profile-body">
-        <img className="artist" src={stock} alt="Artist Picture" />
-        <div>
-          <div class="jumbotron">
-            <h1 class="display-8">Artist Name</h1>
-            <p class="lead">
-              Freelance artist specializing in captivating visual narratives
-              that transcend boundaries, blending intricate brushstrokes with
-              vivid imagination to evoke profound emotions and spark
-              thought-provoking conversations
-            </p>
-            <div class="my-2"> </div>
+    <div className="container">
+      <Row className="px-4 my-2">
+        <Col sm={3}>
+          <Image src="https://picsum.photos/id/1005/5000/3333" fluid rounded />
+        </Col>
+        <Col sm={5}>
+          <h1>artist name</h1>
+          <p class="mt-4">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.{" "}
+          </p>
+          <a href="https://www.google.com">
+            <Button variant="outline-info">Contact</Button>
+          </a>
+        </Col>
+      </Row>
 
-            <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#!" role="button">
-                Contact
+      {/* cards for pics*/}
+      <Row>
+        <Col
+          className="text-center my-5 py-4"
+          style={{
+            fontSize: "16px",
+            borderBottom: "2px solid black",
+            fontWeight: "bold",
+          }}
+        >
+          <Card.Body>Explore art packages below</Card.Body>
+        </Col>
+        <div
+          className="d-flex justify-content-center"
+          style={{ margin: "auto" }}
+        >
+          <Card
+            className="m-4"
+            style={{
+              width: "400px",
+            }}
+          >
+            <Card.Body>
+              <div className="price-tabs">
+                <button
+                  className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+                  onClick={() => toggleTab(1)}
+                >
+                  Basic
+                </button>
+                <button
+                  className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+                  onClick={() => toggleTab(2)}
+                >
+                  Standard
+                </button>
+                <button
+                  className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
+                  onClick={() => toggleTab(3)}
+                >
+                  Premium
+                </button>
+              </div>
+
+              <div className="content-tabs">
+                <div
+                  className={
+                    toggleState === 1 ? "content active-content" : "content"
+                  }
+                >
+                  <h2>$29.99</h2>
+                  <hr />
+                  <p>
+                    Basic Package: Affordable digital prints and art for
+                    enthusiasts.
+                  </p>
+                  <a href="https://google.com">
+                    <button className="buy-button">Buy</button>
+                  </a>
+                </div>
+
+                <div
+                  className={
+                    toggleState === 2 ? "content active-content" : "content"
+                  }
+                >
+                  <h2>$79.99</h2>
+                  <hr />
+                  <p>
+                    Standard Package: Digital and physical prints with
+                    personalized consultation included.
+                  </p>
+                  <a href="https://www.google.com">
+                    <button className="buy-button">Buy</button>
+                  </a>
+                </div>
+
+                <div
+                  className={
+                    toggleState === 3 ? "content active-content" : "content"
+                  }
+                >
+                  <h2>$299.99</h2>
+                  <hr />
+                  <p>
+                    Premium Package: Exclusive access to original artworks with
+                    tailored services and personalized framing options.
+                  </p>
+                  <a href="https://google.com">
+                    <button className="buy-button">Buy</button>
+                  </a>
+                </div>
+              </div>
+            </Card.Body>
+          </Card>
+        </div>
+      </Row>
+      <Row>
+        <Col>
+          <Card style={{ width: "18rem", backgroundColor: "black" }}>
+            <Card.Img
+              variant="top"
+              src={art}
+              style={{ objectFit: "cover", height: "18rem", width: "18rem" }}
+            />
+            <Card.Body>
+              <Card.Title>Title</Card.Title>
+              <a href="https://google.com">
+                <Button variant="outline-info">Buy</Button>
               </a>
-            </p>
-
-            <h2>My Work</h2>
-            
-            <div style={{ display: "flex", width: 1000, padding: 40 }}>
-              <Carousel>
-                <Carousel.Item interval={10000}>
-                  <img className="carousel-image" src={caro3} alt="One" />
-                  <Carousel.Caption>
-                    <h4></h4>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item interval={10000}>
-                  <img className="carousel-image" src={caro1} alt="Two" />
-                  <Carousel.Caption>
-                    <h4></h4>
-                  </Carousel.Caption>
-                </Carousel.Item>
-              </Carousel>
-            </div>
-          </div>
-          
-        </div>
-        
-      </div>
-      <div className="price-container">
-        <div className="price-tabs">
-          <button
-            className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(1)}
-          >
-            Basic
-          </button>
-          <button
-            className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(2)}
-          >
-            Standard
-          </button>
-          <button
-            className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(3)}
-          >
-            Premium
-          </button>
-        </div>
-
-        <div className="content-tabs">
-          <div
-            className={
-              toggleState === 1 ? "content  active-content" : "content"
-            }
-          >
-            <h2>$</h2>
-            <hr />
-            <p>blah</p>
-            <button className="buy-button">Buy Now</button>
-          </div>
-
-          <div
-            className={
-              toggleState === 2 ? "content  active-content" : "content"
-            }
-          >
-            <h2>$$</h2>
-            <hr />
-            <p>blah</p>
-            <button className="buy-button">Buy Now</button>
-          </div>
-
-          <div
-            className={
-              toggleState === 3 ? "content  active-content" : "content"
-            }
-          >
-            <h2>$$$</h2>
-            <hr />
-            <p>blah</p>
-            <button className="buy-button">Buy Now</button>
-          </div>
-        </div>
-      </div>
-      <div className="portfolio">
-        <h1 className="h1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h1>
-      </div>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img
+              variant="top"
+              src={art1}
+              style={{ objectFit: "cover", height: "18rem", width: "18rem" }}
+            />
+            <Card.Body>
+              <Card.Title>Title</Card.Title>
+              <a href="https://www.google.com">
+                <Button variant="outline-info">Buy</Button>
+              </a>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img
+              variant="top"
+              src={art3}
+              style={{ objectFit: "cover", height: "18rem", width: "18rem" }}
+            />
+            <Card.Body>
+              <Card.Title>Title</Card.Title>
+              <a href="https://www.google.com">
+                <Button variant="outline-info">Buy</Button>
+              </a>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img
+              variant="top"
+              src={art2}
+              style={{ objectFit: "cover", height: "18rem", width: "18rem" }}
+            />
+            <Card.Body>
+              <Card.Title>Titlee</Card.Title>
+              <a href="https://www.google.com">
+                <Button variant="outline-info">Buy</Button>
+              </a>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
     </div>
   );
 }
