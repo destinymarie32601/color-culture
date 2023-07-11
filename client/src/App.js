@@ -1,9 +1,19 @@
 import React from "react";
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import ColorContainer from "./components/Colorcontainer";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+//import ColorContainer from "./components/Colorcontainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Artists from './components/pages/Artists';
+import Login from './components/pages/Login';
+import Profile from './components/pages/Profile';
+import NavTabs from './components/NavTabs';
+import Search from "./components/pages/Search";
+import Footer from "./components/Footer";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -32,8 +42,41 @@ const client = new ApolloClient({
 
 function App() {
     return (
-        <ApolloProvider client={client}>
-            <ColorContainer />
+        <ApolloProvider client={client}>\
+            <Router>
+                <div className="flex-column justify-flex-start min-100-vh">
+                    <NavTabs />
+                    <div className="container">
+                        <Routes>
+                            <Route
+                                path="/"
+                                element={<Home />}
+                            />
+                             <Route
+                                path="/about"
+                                element={<About />}
+                            />
+                            <Route
+                                path="/artists"
+                                element={<Artists />}
+                            />
+                            <Route
+                                path="/search"
+                                element={<Search />}
+                            />
+                            <Route
+                                path="/login"
+                                element={<Login />}
+                            />
+                            <Route
+                                path="/users/:userId"
+                                element={<Profile />}
+                            />
+                        </Routes>
+                    </div>
+                    <Footer />
+                </div>
+            </Router>
         </ApolloProvider>
     );
 }

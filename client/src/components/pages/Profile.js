@@ -1,4 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import { useQuery } from "@apollo/client";
+import { QUERY_SINGLE_USER } from "../../utils/queries";
 import { Button, Card, Row, Col, Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import art from "../../assets/images/art.jpg";
@@ -13,6 +16,14 @@ function Tabs() {
     setToggleState(index);
   };
 
+  const { userId } = useParams();
+
+  const { loading, data } = useQuery(QUERY_SINGLE_USER, {
+    variables: { userId: userId },
+  });
+
+  const user = data?.user || {};
+
   return (
     <div className="container">
       <Row className="px-4 my-2">
@@ -20,7 +31,7 @@ function Tabs() {
           <Image src="https://picsum.photos/id/1005/5000/3333" fluid rounded />
         </Col>
         <Col sm={5}>
-          <h1>artist name</h1>
+          <h1>{user.username}</h1>
           <p class="mt-4">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.{" "}
