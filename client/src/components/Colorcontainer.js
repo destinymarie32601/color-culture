@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import About from "./pages/About";
 import Footer from "./Footer";
 import Search from "./pages/Search";
+import Artists from "./pages/Artists";
 
 // TODO : finish imports and container function
 
@@ -34,6 +35,9 @@ export default function ColorContainer() {
     }
     if (currentPage === "Profile") {
       return <Profile />;
+    }
+    if (currentPage === "Artists") {
+      return <Artists/>;
     }
 
     // TODO : add more pages as needed
