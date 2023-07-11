@@ -182,7 +182,7 @@ function Tabs() {
               style={{ objectFit: "cover", height: "18rem", width: "18rem" }}
             />
             <Card.Body>
-              <Card.Title>Title</Card.Title>
+              <Card.Title>Titlee</Card.Title>
               <a href="https://www.google.com">
                 <Button variant="outline-info">Buy</Button>
               </a>
