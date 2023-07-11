@@ -300,3 +300,20 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.swiper-slide{
+  background-position: center;
+  background-size:cover;
+  width:200px;
+  height:auto;
+}
+.swiper-slide img{
+  width:600px;
+  height:50%;
+  padding:20px;
+  border-radius: 100px;
+}
+.container-artists {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
