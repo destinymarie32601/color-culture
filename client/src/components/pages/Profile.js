@@ -99,7 +99,7 @@ function Tabs() {
                     enthusiasts.
                   </p>
                   <a href="https://google.com">
-                    <button className="buy-button">Buy</button>
+                    <button className="buy-button">Add to Cart</button>
                   </a>
                 </div>
 
@@ -115,7 +115,7 @@ function Tabs() {
                     personalized consultation included.
                   </p>
                   <a href="https://www.google.com">
-                    <button className="buy-button">Buy</button>
+                    <button className="buy-button">Add to Cart</button>
                   </a>
                 </div>
 
@@ -131,7 +131,7 @@ function Tabs() {
                     tailored services and personalized framing options.
                   </p>
                   <a href="https://google.com">
-                    <button className="buy-button">Buy</button>
+                    <button className="buy-button">Add to Cart</button>
                   </a>
                 </div>
               </div>
@@ -150,7 +150,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <a href="https://google.com">
-                <Button variant="outline-info">Buy</Button>
+                <Button variant="outline-info">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
@@ -165,7 +165,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <a href="https://www.google.com">
-                <Button variant="outline-info">Buy</Button>
+                <Button variant="outline-info">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
@@ -180,7 +180,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <a href="https://www.google.com">
-                <Button variant="outline-info">Buy</Button>
+                <Button variant="outline-info">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
@@ -195,7 +195,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Titlee</Card.Title>
               <a href="https://www.google.com">
-                <Button variant="outline-info">Buy</Button>
+                <Button variant="outline-info">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
