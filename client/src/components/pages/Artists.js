@@ -12,6 +12,8 @@ import artistten from "./images/artistnum10.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import Lottie from 'lottie-react';
+import animationData from './images/animation_ljyvxowa.json';
 
 // Install Swiper modules
 
@@ -72,6 +74,10 @@ const profiles = [
 export default function Artists() {
     return (
         <div className="container-artists">
+            <div className="artistanimation-container">
+        <Lottie animationData={animationData} loop autoplay
+        />
+      </div>
             <Swiper
                 modules={{ Swiper }}
                 spaceBetween={20}

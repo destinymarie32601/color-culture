@@ -5,8 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Search() {
   return (
-    <>
-      <div className="animation-container bg-primary position-absolute w-100">
+    <div className="search-container">
+      <div className="searchanimation-container">
         <Lottie animationData={animationData} loop autoplay
         />
       </div>
@@ -24,6 +24,7 @@ export default function Search() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
+

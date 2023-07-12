@@ -1,9 +1,10 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const artSchema = new Schema({
     artist: [
         {
             type: String,
+            required: true,
         },
     ],
     description: {
@@ -19,4 +20,7 @@ const artSchema = new Schema({
     },
 });
 
-module.exports = artSchema;
+const Art = model('Art', artSchema);
+
+
+module.exports = Art;

@@ -2,10 +2,18 @@ import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import cityArt from '../../assets/images/city-life.jpg';
 import treeArt from '../../assets/images/tree.jpg';
+import Lottie from 'lottie-react';
+import animationData from './images/animation_ljyvxowa.json';
 
 export default function Home() {
     return (
-        <div style={{ display: 'block', width: 900, padding: 60 }}>
+        <div className= "home-container" style={{ display: 'block', width: 900, padding: 60 }}>
+            <div className="homeanimation-container">
+                <Lottie animationData={animationData} 
+                loop 
+                autoplay
+                />
+            </div>
             <h4>React-Bootstrap Carousel Component</h4>
             <Carousel>
                 <Carousel.Item interval={10000}>

@@ -1,16 +1,19 @@
 [
     {
         "username": "TheFirstArtist",
+        "bio": "",
         "email": "tom1@gmail.com",
         "password": "password123"
     },
     {
         "username": "UnlimitedArtworks",
+        "bio": "",
         "email": "bob2@gmail.com",
         "password": "password456"
     },
     {
         "username": "SamMart",
+        "bio": "",
         "email": "sam3@gmail.com",
         "password": "password789"
     }
