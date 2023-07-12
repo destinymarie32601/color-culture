@@ -71,7 +71,7 @@ export default function About() {
                   unique and exciting applications. When I'm not glued to my
                   computer, you'll likely find me at the gym or taking my dog
                   for a walk. Currently learning Full Stack with UNCC bootcamp
-                  and excited to break into tech..
+                  and excited to break into tech.
                 </p>
                 <a href="https://www.linkedin.com/in/david-rodriguez-b2538a247">
                   <img src={LinkedIn} className="linked-in" alt="..."></img>
