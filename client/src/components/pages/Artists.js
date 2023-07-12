@@ -81,7 +81,7 @@ export default function Artists() {
                 {
                     profiles.map(({ profileImage, caption, link }, index) => {
                         return (
-                            <SwiperSlide key={index} style={{height:'629px'}}>
+                            <SwiperSlide key={index} style={{height:'360px'}}>
                                 <img src={profileImage} alt={caption} />
                                 <h3>{caption}</h3>
                                 <a href={link}>View This Artists Profile</a>

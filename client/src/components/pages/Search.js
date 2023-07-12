@@ -1,6 +1,4 @@
 import React from "react";
-import artistone from "./images/artistnum1.jpg";
-import artisttwo from "./images/artistnum2.jpg";
 import Lottie from 'lottie-react';
 import animationData from './images/animation_ljyvxowa.json';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,7 +7,8 @@ export default function Search() {
   return (
     <>
       <div className="animation-container bg-primary position-absolute w-100">
-        <Lottie animationData={animationData} loop autoplay/>
+        <Lottie animationData={animationData} loop autoplay
+        />
       </div>
       <div className="row justify-content-center mt-5">
         <div className="col-md-6">
