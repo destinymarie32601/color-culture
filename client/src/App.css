@@ -24,18 +24,31 @@
 }
 
 .card-img {
-  height: 100%;
+  height: 410px; 
+  object-fit: cover;
+  /*height: 100%;
+  max-width: 100%;
+  margin-left: -12px;*/
+}
+
+.h-img {
+  height: 500px; 
+  object-fit: cover;
+}
+
+.b-card-img {
+  height: 350px;
   max-width: 100%;
   margin-left: -12px;
 }
 
 .about-title {
-  margin-left: -20px;
+  margin-left: -10px;
   font-size: 30px;
 }
 
 .about-text {
-  margin-left: -20px;
+  margin-left: -10px;
   font-size: 16px;
 }
 
@@ -136,7 +149,7 @@
 
 .linked-in {
   width: 11%;
-  margin-left: -21px;
+  margin-left: -10px;
 }
 
 .github {

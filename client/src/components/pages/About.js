@@ -8,8 +8,10 @@ import Blake from './images/blake-edwards-img.jpg';
 export default function About() {
     return (
         <div className="about-container">
-                <h1 className="about-header">What is ColorCulture?</h1>
-                <p className="about-body">Color Culture is a place where artists can buy/sell their art, connect with others by commenting on each other's art, and commission artists to do specific work per request of the user.</p>
+            <h1 className="about-header">What is ColorCulture?</h1>
+            <p className="about-body">Color Culture is a place where artists can buy/sell their art, connect with others by commenting on each other's art, and commission artists to do specific work per request of the user. It's a gallery
+                for the everyday artists who is trying to make it big one brush at a time. We also hope ColorCulture can become a place where artists from all over the world can come together and share ideas, techniques, and masterpieces. 
+                The future social media for the next big artiste. </p>
             <div className="about-cards row row-cols-1 row-cols-md-1 g-1">
                 <div className="card mb-3">
                     <div className="single-card row g-0">
@@ -68,38 +70,38 @@ export default function About() {
                         </div>
                     </div>
                 </div>
+                <div className="card mb-3">
+                    <div className="row g-0">
+                        <div className="col-md-4">
+                            <img
+                                src={david}
+                                className="card-img img-fluid rounded-start"
+                                alt="..."
+                            />
+                        </div>
+                        <div className="col-md-8">
+                            <div className="card-body">
+                                <h5 className="about-title">About David Rodriguez</h5>
+                                <p className="about-text">
+                                    I'm David Rodriguez, a web developer based in Charlotte, NC. I
+                                    love web development because it lets me combine my creativity,
+                                    problem-solving skills, and passion for technology to build
+                                    unique and exciting applications. When I'm not glued to my
+                                    computer, you'll likely find me at the gym or taking my dog
+                                    for a walk. Currently learning Full Stack with UNCC bootcamp
+                                    and excited to break into tech..
+                                </p>
+                                <a href="https://www.linkedin.com/in/david-rodriguez-b2538a247">
+                                    <img src={LinkedIn} className="linked-in" alt="..."></img>
+                                </a>
+                                <a href="https://github.com/Daveerr">
+                                    <img src={Github} className="github" alt="..."></img>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        <div className="card mb-3">
-          <div className="row g-0">
-            <div className="col-md-4">
-              <img
-                src={david}
-                className="card-img img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <h5 className="about-title">About David Rodriguez</h5>
-                <p className="about-text">
-                  I'm David Rodriguez, a web developer based in Charlotte, NC. I
-                  love web development because it lets me combine my creativity,
-                  problem-solving skills, and passion for technology to build
-                  unique and exciting applications. When I'm not glued to my
-                  computer, you'll likely find me at the gym or taking my dog
-                  for a walk. Currently learning Full Stack with UNCC bootcamp
-                  and excited to break into tech..
-                </p>
-                <a href="https://www.linkedin.com/in/david-rodriguez-b2538a247">
-                  <img src={LinkedIn} className="linked-in" alt="..."></img>
-                </a>
-                <a href="https://github.com/Daveerr">
-                  <img src={Github} className="github" alt="..."></img>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-        </div>
-  );
+    );
 }
