@@ -36,7 +36,7 @@ const NavTabs = () => {
           <button className="btn btn-lg btn-light m-2" onClick={logout}>
             Logout
           </button>
-          <Link to={"users/userId"}>
+          <Link to={"/me"}>
             <li className="nav-items">
               Profile
             </li>
