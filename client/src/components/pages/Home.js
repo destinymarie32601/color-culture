@@ -2,6 +2,8 @@ import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import cityArt from '../../assets/images/city-life.jpg';
 import treeArt from '../../assets/images/tree.jpg';
+import Lottie from 'lottie-react';
+import animationData from './images/animation_ljyvxowa.json';
 import couple from '../../assets/images/art.jpg';
 import jazz from '../../assets/images/art3.JPG';
 import cats from '../../assets/images/cat.jpg';
@@ -35,7 +37,13 @@ export default function Home() {
     ];
 
     return (
-        <div>
+        <div className= "home-container" style={{ display: 'block', width: 900, padding: 60 }}>
+            <div className="homeanimation-container">
+                <Lottie animationData={animationData} 
+                loop 
+                autoplay
+                />
+            </div>
             <div style={{ display: 'block', width: 1400, padding: 60 }}>
                 <h4>Artworks of the day!</h4>
                 <Carousel>

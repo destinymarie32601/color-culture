@@ -7,6 +7,8 @@ import Nav from 'react-bootstrap/Nav';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER, ADD_USER } from '../../utils/mutation';
 import Auth from '../../utils/auth';
+import Lottie from 'lottie-react';
+import animationData from './images/animation_ljyvxowa.json';
 
 const Login = (props) => {
     //const [username, setUsername] = useState('');
@@ -15,8 +17,8 @@ const Login = (props) => {
     const [activeTab, setActiveTab] = useState('login');
     const [login] = useMutation(LOGIN_USER);
     const [addUser] = useMutation(ADD_USER);
-    const [loginState, setLoginState] = useState({ email: '', password: ''});
-    const [signupState, setSignupState] = useState({ email: '', password: '', username: ''});
+    const [loginState, setLoginState] = useState({ email: '', password: '' });
+    const [signupState, setSignupState] = useState({ email: '', password: '', username: '' });
 
     const handleloginChange = (event) => {
         const { name, value } = event.target;
@@ -47,16 +49,16 @@ const Login = (props) => {
         event.preventDefault();
         console.log(loginState);
         //if (validateLoginForm()) {
-            try {
-                const { data } = await login({
-                    variables: { ...loginState },
-                });
-               
-                Auth.login(data.login.token);
-                console.log('Login successful!');
-            } catch (error) {
-                console.log('Invalid login credentials');
-            }
+        try {
+            const { data } = await login({
+                variables: { ...loginState },
+            });
+
+            Auth.login(data.login.token);
+            console.log('Login successful!');
+        } catch (error) {
+            console.log('Invalid login credentials');
+        }
         //}
 
         setLoginState({
@@ -70,16 +72,16 @@ const Login = (props) => {
         event.preventDefault();
         console.log(signupState);
         //if (validateSignUpForm()) {
-            try {
-                const { data } = await addUser({
-                    variables: { ...signupState },
-                });
-                
-                Auth.login(data.addUser.token);
-                console.log('Sign up successful!');
-            } catch (error) {
-                console.log('Invalid sign-up');
-            }
+        try {
+            const { data } = await addUser({
+                variables: { ...signupState },
+            });
+
+            Auth.login(data.addUser.token);
+            console.log('Sign up successful!');
+        } catch (error) {
+            console.log('Invalid sign-up');
+        }
         //}
 
         setSignupState({
@@ -95,6 +97,10 @@ const Login = (props) => {
 
     return (
         <div className='Login'>
+            <div className="loginanimation-container">
+                <Lottie animationData={animationData} loop autoplay
+                />
+            </div>
             <div className='container' style={{ width: '600px', margin: '20px auto', border: '1px solid #ccc', borderRadius: '4px', padding: '10px' }}>
                 <Tab.Container activeKey={activeTab} onSelect={handleTabSelect}>
                     <Nav varient='tabs' style={{ width: '100%', justifyContent: 'center' }}>

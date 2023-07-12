@@ -1,21 +1,83 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
+:root {
+  --color1:#16171b;
+  --color2: #F2F7F2;
+}
 .about-container {
-  padding: 10px;
+  padding: 5px;
+  position: relative;
+}
+.search-container {
+  position:relative;
+}
+.home-container{
+  position: relative;
+}
+.homeanimation-container{
+  position: absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width: 400%;
+  height:100%;
+  z-index: -1;
+}
+.Login{
+  position: relative;
+}
+.loginanimation-container{
+  position: absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width: 400%;
+  height:100%;
+  z-index: -1;
+}
+.searchanimation-container{
+  position: absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width: 400%;
+  height:100%;
+  z-index: -1;
+}
+.artistanimation-container{
+  position: absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width: 400%;
+  height:100%;
+  z-index: -1;
+}
+.animation-container{
+  position: absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width: 400%;
+  height:100%;
+  z-index: -1;
+
 }
 
 .about-header {
-  color: lightblue;
+  color: var(--color1);
   margin: 10px;
   font-family: "Poppins";
   text-align: center;
 }
 
 .about-body {
-  color: lightblue;
+  color: var(--color1);
   margin: 10px;
   font-family: "Poppins";
   text-align: center;
+
+
 }
 
 .about-cards {
@@ -62,7 +124,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  background-color: white;
+  background-color: var(--color1);
   border-radius: 1px;
   border: 0.2px solid rgb(15, 14, 14);
 }
@@ -74,18 +136,25 @@
   width: 100%;
   border: none;
   outline: none;
+
 }
 
+
 .nav-items {
-  margin: 0 5px;
+  margin: 0 20px;
+  color: #16171b; 
+  font-family: 'Poppins';
+
 }
+
 
 .nav-item {
   padding: 2px 2px;
-  background-color: whitesmoke;
   text-align: center;
   margin: 10px 0;
+
 }
+
 
 .home-icon {
   width: 100;
@@ -95,6 +164,7 @@
 .nav-item .nav-link {
   color: rgb(13, 9, 9);
   font-family: "Poppins";
+
 }
 .search-container {
   display: flex;
@@ -141,9 +211,9 @@
 }
 
 .footer {
-  background-color: gray;
-  position: absolute;
-  bottom: 1;
+  background-color: var(--color1);
+  position: fixed;
+  bottom: 0;
   width: 100%;
 }
 
@@ -329,6 +399,7 @@ button {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  position: relative;
 }
 
 
