@@ -123,18 +123,25 @@
   width: 100%;
   border: none;
   outline: none;
+
 }
 
 
 .nav-items {
-  margin: 0 20px;  
+  margin: 0 20px;
+  color: #16171b; 
+  font-family: 'Poppins';
+
 }
+
 
 .nav-item {
   padding: 2px 2px;
   text-align: center;
   margin: 10px 0;
+
 }
+
 
 .home-icon {
   width: 100;
@@ -144,6 +151,7 @@
 .nav-item .nav-link {
   color: rgb(13, 9, 9);
   font-family: "Poppins";
+
 }
 .search-container {
   display: flex;
