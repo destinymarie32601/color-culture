@@ -14,6 +14,7 @@ import Profile from './components/pages/Profile';
 import NavTabs from './components/NavTabs';
 import Search from "./components/pages/Search";
 import Footer from "./components/Footer";
+import Success from "./components/pages/Success"
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -71,6 +72,11 @@ function App() {
                             <Route
                                 path="/users/:userId"
                                 element={<Profile />}
+                            />
+
+                            <Route
+                            path="/Success"
+                            element={<Success />}
                             />
                         </Routes>
                     </div>
