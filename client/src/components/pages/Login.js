@@ -122,7 +122,7 @@ const Login = (props) => {
                     <Tab.Content>
                         <Tab.Pane eventKey='login'>
                             <Form onSubmit={handleLoginSubmit}>
-                                <Form.Group size='lg' controlId='username'>
+                                <Form.Group size='lg' controlId='login-email'>
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control
                                         autoFocus
@@ -132,7 +132,7 @@ const Login = (props) => {
                                         onChange={handleloginChange}
                                     />
                                 </Form.Group>
-                                <Form.Group size='lg' controlId='password'>
+                                <Form.Group size='lg' controlId='login-password'>
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
                                         name='password'
@@ -148,7 +148,7 @@ const Login = (props) => {
                         </Tab.Pane>
                         <Tab.Pane eventKey='signup'>
                             <Form onSubmit={handleSignUpSubmit}>
-                                <Form.Group size='lg' controlId='username'>
+                                <Form.Group size='lg' controlId='signup-username'>
                                     <Form.Label>Username</Form.Label>
                                     <Form.Control
                                         autoFocus
@@ -158,7 +158,7 @@ const Login = (props) => {
                                         onChange={handlesignupChange}
                                     />
                                 </Form.Group>
-                                <Form.Group size='lg' controlId='email'>
+                                <Form.Group size='lg' controlId='singup-email'>
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control
                                         name='email'
@@ -167,7 +167,7 @@ const Login = (props) => {
                                         onChange={handlesignupChange}
                                     />
                                 </Form.Group>
-                                <Form.Group size='lg' controlId='password'>
+                                <Form.Group size='lg' controlId='signup-password'>
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
                                         name='password'
