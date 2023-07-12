@@ -17,7 +17,7 @@ export default function About() {
                 />
             </div>
             <h1 className="about-header">What is ColorCulture?</h1>
-            <p className="about-body">Color Culture is a place where artists can buy/sell their art, connect with others by commenting on each other's art, and commission artists to do specific work per request of the user.</p>
+            <p className="about-body">Color Culture is THE place for art enthusiast. Users can browse for different art pieces by different artists. Users can connect and interact with artists and purchase unique commission based pieces. Users can even sell their own art, after signing up and making an account. Color Culture is a platform to connect, interact, and inspire.</p>
             <div className="about-cards row row-cols-1 row-cols-md-1 g-1">
                 <div className="card mb-3">
                     <div className="single-card row g-0">
