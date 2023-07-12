@@ -13,8 +13,8 @@ const NavTabs = () => {
     Auth.logout();
   };
   const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
 
 
@@ -42,15 +42,29 @@ const NavTabs = () => {
       </Link>
       {Auth.loggedIn() ? (
         <>
-          <button className="btn btn-lg btn-light m-2" onClick={logout}>
-            Logout
-          </button>
           <Link to={"/me"}>
             <li className="nav-items">
               Profile
 
             </li>
           </Link>
+          <button className="btn btn-lg btn-light m-2" onClick={logout}>
+            Logout
+          </button>
+          <Navbar>
+            <Navbar.Toggle />
+            <NavbarCollapse>
+              <Button onClick={handleShow}>Cart</Button>
+            </NavbarCollapse>
+          </Navbar>
+          <Modal show={show} onHide={handleClose} className="backdrop">
+            <Modal.Header closeButton>
+              <ModalTitle> Shopping Cart</ModalTitle>
+              <Modal.Body>
+                <h1>Cart items here</h1>
+              </Modal.Body>
+            </Modal.Header>
+          </Modal>
         </>
       ) : (
         <Link to="/login">
@@ -59,20 +73,6 @@ const NavTabs = () => {
           </li>
         </Link>
       )}
-              <Navbar>
-        <Navbar.Toggle />
-        <NavbarCollapse>
-          <Button onClick={handleShow}>Cart</Button>
-        </NavbarCollapse>
-      </Navbar>
-      <Modal show={show} onHide={handleClose} className="backdrop">
-        <Modal.Header closeButton>
-          <ModalTitle> Shopping Cart</ModalTitle>
-          <Modal.Body>
-            <h1>Cart items here</h1>
-          </Modal.Body>
-        </Modal.Header>
-      </Modal>
     </ul>
   );
 };

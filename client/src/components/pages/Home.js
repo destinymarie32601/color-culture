@@ -4,8 +4,38 @@ import cityArt from '../../assets/images/city-life.jpg';
 import treeArt from '../../assets/images/tree.jpg';
 import Lottie from 'lottie-react';
 import animationData from './images/animation_ljyvxowa.json';
+import couple from '../../assets/images/art.jpg';
+import jazz from '../../assets/images/art3.JPG';
+import cats from '../../assets/images/cat.jpg';
+import hand from '../../assets/images/hand.jpg';
+import stag from '../../assets/images/stag.jpg';
+import winter from '../../assets/images/winter_land.jpg';
 
 export default function Home() {
+
+    const homeArts = [
+        {
+            artwork: cats,
+            artist: 'Hen',
+            title: 'Cat with Kittens'
+        },
+        {
+            artwork: hand,
+            artist: 'Isaac_We',
+            title: 'Hand'
+        },
+        {
+            artwork: stag,
+            artist: 'GeorgeLey',
+            title: 'Stag'
+        },
+        {
+            artwork: winter,
+            artist: 'Ludwig K',
+            title: 'Winter Landscape in Moonlight'
+        },
+    ];
+
     return (
         <div className= "home-container" style={{ display: 'block', width: 900, padding: 60 }}>
             <div className="homeanimation-container">
@@ -14,31 +44,72 @@ export default function Home() {
                 autoplay
                 />
             </div>
-            <h4>React-Bootstrap Carousel Component</h4>
-            <Carousel>
-                <Carousel.Item interval={10000}>
-                    <img
-                        className="d-block w-100"
-                        src={cityArt}
-                        alt="One"
-                    />
-                    <Carousel.Caption>
-                        <h3>Label for first slide</h3>
-                        <p>Sample Text for Image One</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item interval={10000}>
-                    <img
-                        className="d-block w-100"
-                        src={treeArt}
-                        alt="Two"
-                    />
-                    <Carousel.Caption>
-                        <h3>Label for second slide</h3>
-                        <p>Sample Text for Image Two</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+            <div style={{ display: 'block', width: 1400, padding: 60 }}>
+                <h4>Artworks of the day!</h4>
+                <Carousel>
+                    <Carousel.Item interval={10000}>
+                        <img
+                            className="h-img d-block w-100"
+                            src={cityArt}
+                            alt="One"
+                        />
+                        <Carousel.Caption>
+                            <h3>Label for first slide</h3>
+                            <p>Sample Text for Image One</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item interval={10000}>
+                        <img
+                            className="h-img d-block w-100"
+                            src={treeArt}
+                            alt="Two"
+                        />
+                        <Carousel.Caption>
+                            <h3>Label for second slide</h3>
+                            <p>Sample Text for Image Two</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item interval={10000}>
+                        <img
+                            className="h-img d-block w-100"
+                            src={couple}
+                            alt="Three"
+                        />
+                        <Carousel.Caption>
+                            <h3>Label for second slide</h3>
+                            <p>Sample Text for Image Two</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item interval={10000}>
+                        <img
+                            className="h-img d-block w-100"
+                            src={jazz}
+                            alt="Four"
+                        />
+                        <Carousel.Caption>
+                            <h3>Label for second slide</h3>
+                            <p>Sample Text for Image Two</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </div>
+            <div className="row row-cols-1 row-cols-md-2 g-4">
+                {
+                    homeArts.map(({ artwork, artist, title }, index) => {
+                        return (
+                            <div className="col">
+                                <div class="card text-bg-dark" key={index}>
+                                    <img src={artwork} class="card-img" alt="..." />
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">{title}</h5>
+                                        <p class="card-text">By: {artist}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
     );
 }
