@@ -9,7 +9,6 @@ import artistseven from "./images/artistnum7.jpg";
 import artisteight from "./images/artistnum8.jpg";
 import artistnine from "./images/artistnum9.jpg";
 import artistten from "./images/artistnum10.jpg";
-import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -74,19 +73,20 @@ export default function Artists() {
     return (
         <div className="container-artists">
             <Swiper
-                modules={{Swiper}}
-                spaceBetween={50}
-                slidesPerView={3}
-                pagination={{ clickable: true }}>
+                modules={{ Swiper }}
+                spaceBetween={20}
+                slidesPerView={4}
+                grabCursor={true}
+                >
                 {
-                profiles.map(({profileImage, caption, link},  index) => {
-                    return (
-                    <SwiperSlide key={index}>
-                        <img src={profileImage} alt={caption} />
-                        <h3>{caption}</h3>
-                        <a href={link}>View Profile</a>
-                    </SwiperSlide>
-                         )
+                    profiles.map(({ profileImage, caption, link }, index) => {
+                        return (
+                            <SwiperSlide key={index} style={{height:'629px'}}>
+                                <img src={profileImage} alt={caption} />
+                                <h3>{caption}</h3>
+                                <a href={link}>View This Artists Profile</a>
+                            </SwiperSlide>
+                        )
                     })
                 }
             </Swiper>

@@ -43,7 +43,7 @@ const client = new ApolloClient({
 
 function App() {
     return (
-        <ApolloProvider client={client}>\
+        <ApolloProvider client={client}>
             <Router>
                 <div className="flex-column justify-flex-start min-100-vh">
                     <NavTabs />
@@ -53,7 +53,7 @@ function App() {
                                 path="/"
                                 element={<Home />}
                             />
-                             <Route
+                            <Route
                                 path="/about"
                                 element={<About />}
                             />
@@ -68,6 +68,10 @@ function App() {
                             <Route
                                 path="/login"
                                 element={<Login />}
+                            />
+                            <Route
+                                path="/me"
+                                element={<Profile />}
                             />
                             <Route
                                 path="/users/:userId"

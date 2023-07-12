@@ -302,13 +302,10 @@ button {
 }
 .swiper-slide{
   background-position: center;
-  background-size:cover;
-  width:200px;
-  height:auto;
 }
 .swiper-slide img{
-  width:600px;
-  height:50%;
+  width:300px;
+  height:300px;
   padding:20px;
   border-radius: 100px;
 }
@@ -317,6 +314,7 @@ button {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
 
 /* shopping cart  */
 
@@ -329,3 +327,5 @@ button {
   height: 100%;
   z-index: 9999;
 }
+
+
