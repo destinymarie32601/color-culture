@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { QUERY_SINGLE_USER } from "../../utils/queries";
+import { QUERY_SINGLE_USER, QUERY_ME } from "../../utils/queries";
 import { Button, Card, Row, Col, Image } from "react-bootstrap";
+import Auth from "../../utils/auth";
 import "bootstrap/dist/css/bootstrap.min.css";
 import art from "../../assets/images/art.jpg";
 import art1 from "../../assets/images/art1.JPG";
@@ -18,11 +19,27 @@ function Tabs() {
 
   const { userId } = useParams();
 
-  const { loading, data } = useQuery(QUERY_SINGLE_USER, {
+  const { loading, data } = useQuery(
+    userId ? QUERY_SINGLE_USER : QUERY_ME, 
+    {
     variables: { userId: userId },
-  });
+    }
+  );
 
-  const user = data?.user || {};
+  const user = data?.me || data?.user || {};
+
+  if (Auth.loggedIn() && Auth.getProfile().data._id === userId) {
+    return <Navigate to="/me" />;
+  }
+
+  if (!user?.username) {
+    return (
+      <h4>
+        You need to be logged in to see your profile page. Use the navigation
+        links above to sign up or log in!
+      </h4>
+    );
+  }
 
   return (
     <div className="container">
@@ -99,7 +116,7 @@ function Tabs() {
                     enthusiasts.
                   </p>
                   <a href="https://google.com">
-                    <button className="buy-button">Buy</button>
+                    <button className="buy-button">Add to Cart</button>
                   </a>
                 </div>
 
@@ -115,7 +132,7 @@ function Tabs() {
                     personalized consultation included.
                   </p>
                   <a href="https://www.google.com">
-                    <button className="buy-button">Buy</button>
+                    <button className="buy-button">Add to Cart</button>
                   </a>
                 </div>
 
@@ -131,7 +148,7 @@ function Tabs() {
                     tailored services and personalized framing options.
                   </p>
                   <a href="https://google.com">
-                    <button className="buy-button">Buy</button>
+                    <button className="buy-button">Add to Cart</button>
                   </a>
                 </div>
               </div>
@@ -150,7 +167,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <a href="https://google.com">
-                <Button variant="outline-info">Buy</Button>
+                <Button variant="outline-Primary">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
@@ -165,7 +182,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <a href="https://www.google.com">
-                <Button variant="outline-info">Buy</Button>
+                <Button variant="outline-Primary">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
@@ -180,7 +197,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Title</Card.Title>
               <a href="https://www.google.com">
-                <Button variant="outline-info">Buy</Button>
+                <Button variant="outline-Primary">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
@@ -195,7 +212,7 @@ function Tabs() {
             <Card.Body>
               <Card.Title>Titlee</Card.Title>
               <a href="https://www.google.com">
-                <Button variant="outline-info">Buy</Button>
+                <Button variant="outline-primary">Add to Cart</Button>
               </a>
             </Card.Body>
           </Card>
