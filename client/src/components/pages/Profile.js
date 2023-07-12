@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { QUERY_SINGLE_USER } from "../../utils/queries";
+import { QUERY_SINGLE_USER, QUERY_ME } from "../../utils/queries";
 import { Button, Card, Row, Col, Image } from "react-bootstrap";
+import Auth from "../../utils/auth";
 import "bootstrap/dist/css/bootstrap.min.css";
 import art from "../../assets/images/art.jpg";
 import art1 from "../../assets/images/art1.JPG";
@@ -18,11 +19,27 @@ function Tabs() {
 
   const { userId } = useParams();
 
-  const { loading, data } = useQuery(QUERY_SINGLE_USER, {
+  const { loading, data } = useQuery(
+    userId ? QUERY_SINGLE_USER : QUERY_ME, 
+    {
     variables: { userId: userId },
-  });
+    }
+  );
 
-  const user = data?.user || {};
+  const user = data?.me || data?.user || {};
+
+  if (Auth.loggedIn() && Auth.getProfile().data._id === userId) {
+    return <Navigate to="/me" />;
+  }
+
+  if (!user?.username) {
+    return (
+      <h4>
+        You need to be logged in to see your profile page. Use the navigation
+        links above to sign up or log in!
+      </h4>
+    );
+  }
 
   return (
     <div className="container">
