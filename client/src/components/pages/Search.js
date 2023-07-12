@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function Search() {
   return (
     <>
-      <div className="animation-container">
+      <div className="animation-container bg-primary position-absolute w-100">
         <Lottie animationData={animationData} loop autoplay/>
       </div>
       <div className="row justify-content-center mt-5">
@@ -21,20 +21,6 @@ export default function Search() {
             <div className="input-group mb-3">
               <input type="text" className="form-control" placeholder="Search for an artist" />
               <button className="btn btn-primary" type="button">Search</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="row mt-5">
-        <div className="col-md-6">
-          <div className="art-photos">
-            <div className="artphoto">
-              <img src={artistone} alt="artist1" className="img-fluid" />
-              <p>Many clients love to work with artist because he has a very timeless style and uses a lot of colors. He also does commissions for portraits and landscapes in the abstract art field</p>
-            </div>
-            <div className="artphoto">
-              <img src={artisttwo} alt="artist2" className="img-fluid" />
-              <p>Many clients love this artist because she has a very unique texture style and paints with a certain color palette in all her finished pieces. She does amazing commissions for gifts and think pieces</p>
             </div>
           </div>
         </div>
