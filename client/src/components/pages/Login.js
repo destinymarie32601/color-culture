@@ -95,7 +95,7 @@ const Login = (props) => {
 
     return (
         <div className='Login'>
-            <div className='container' style={{ width: '500px', margin: '20px auto', border: '1px solid #ccc', borderRadius: '4px', padding: '10px' }}>
+            <div className='container' style={{ width: '600px', margin: '20px auto', border: '1px solid #ccc', borderRadius: '4px', padding: '10px' }}>
                 <Tab.Container activeKey={activeTab} onSelect={handleTabSelect}>
                     <Nav varient='tabs' style={{ width: '100%', justifyContent: 'center' }}>
                         <Nav.Item>
