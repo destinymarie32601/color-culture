@@ -7,10 +7,10 @@ import Blake from './images/blake-edwards-img.jpg';
 
 export default function About() {
     return (
-        <div>
-            <h1 className="about-header">What is ColorCulture?</h1>
-            <p className="about-body">Color Culture is a place where artists can buy/sell their art, connect with others by commenting on each other's art, and commission artists to do specific work per request of the user.</p>
-            <div className="about-cards row row-cols-1 row-cols-md-2 g-4">
+        <div className="about-container">
+                <h1 className="about-header">What is ColorCulture?</h1>
+                <p className="about-body">Color Culture is a place where artists can buy/sell their art, connect with others by commenting on each other's art, and commission artists to do specific work per request of the user.</p>
+            <div className="about-cards row row-cols-1 row-cols-md-1 g-1">
                 <div className="card mb-3">
                     <div className="single-card row g-0">
                         <div className="col-md-4">
@@ -99,6 +99,7 @@ export default function About() {
               </div>
             </div>
           </div>
+        </div>
         </div>
   );
 }

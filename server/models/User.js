@@ -9,6 +9,10 @@ const userSchema = new Schema(
         required: true,
         unique: true,
     },
+    bio: {
+        type: String,
+        required: true,
+    },
     email: {
         type: String,
         required: true,
@@ -21,7 +25,12 @@ const userSchema = new Schema(
         unique: true
     },
 
-    artworks: [artSchema],
+    artworks: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: ''
+        }
+    ],
 },
 {
     toJSON: {

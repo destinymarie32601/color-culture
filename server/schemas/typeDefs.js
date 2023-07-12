@@ -6,6 +6,14 @@ const typeDefs = gql`
         username: String!
         email: String!
         password: String!
+        artworks: [Art]
+    }
+
+    type Art {
+        _id: ID!
+        description: String!
+        image: String!
+        title: String!
     }
 
     type Auth {
@@ -16,6 +24,8 @@ const typeDefs = gql`
     type Query {
         users: [User]!
         user(userId: ID!): User
+        artworks(username: String): [Art]
+        artwork(artId: ID!): Art
         me: User
     }
 
