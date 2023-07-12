@@ -1,14 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import Auth from "../utils/auth";
 import customHomeIcon from "./pages/images/logoicon.jpg";
+import { Button, Navbar, Modal, ModalTitle } from "react-bootstrap";
+import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
+import { useState } from "react";
+
 
 const NavTabs = () => {
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
   };
+  const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
+
   return (
     <ul className="nav nav-tabs">
       <Link to="/">
@@ -39,6 +48,7 @@ const NavTabs = () => {
           <Link to={"/me"}>
             <li className="nav-items">
               Profile
+
             </li>
           </Link>
         </>
@@ -49,6 +59,20 @@ const NavTabs = () => {
           </li>
         </Link>
       )}
+              <Navbar>
+        <Navbar.Toggle />
+        <NavbarCollapse>
+          <Button onClick={handleShow}>Cart</Button>
+        </NavbarCollapse>
+      </Navbar>
+      <Modal show={show} onHide={handleClose} className="backdrop">
+        <Modal.Header closeButton>
+          <ModalTitle> Shopping Cart</ModalTitle>
+          <Modal.Body>
+            <h1>Cart items here</h1>
+          </Modal.Body>
+        </Modal.Header>
+      </Modal>
     </ul>
   );
 };
