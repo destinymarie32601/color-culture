@@ -9,6 +9,8 @@ import art from "../../assets/images/art.jpg";
 import art1 from "../../assets/images/art1.JPG";
 import art2 from "../../assets/images/art2.jpg";
 import art3 from "../../assets/images/art3.JPG";
+import Lottie from 'lottie-react';
+import animationData from './images/animation_ljyvxowa.json';
 
 function Tabs() {
   const [toggleState, setToggleState] = useState(1);
@@ -43,7 +45,12 @@ function Tabs() {
 
   return (
     <div className="container">
+      <div className="profileanimation-container">
+        <Lottie animationData={animationData} loop autoplay
+        />
+        </div>
       <Row className="px-4 my-2">
+      
         <Col sm={3}>
           <Image src="https://picsum.photos/id/1005/5000/3333" fluid rounded />
         </Col>

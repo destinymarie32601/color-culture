@@ -20,22 +20,22 @@ import animationData from './images/animation_ljyvxowa.json';
 const profiles = [
     {
         profileImage: artistone,
-        caption: 'Profile 1',
+        caption: 'James Grant',
         link: 'profile1-link'
     },
     {
         profileImage: artisttwo,
-        caption: 'Profile 2',
+        caption: 'Maria Aldean',
         link: 'profile2-link'
     },
     {
         profileImage: artistthree,
-        caption: 'Profile 3',
+        caption: '',
         link: 'profile2-link'
     },
     {
         profileImage: artistfour,
-        caption: 'Profile 4',
+        caption: 'Assandra Rodriguez',
         link: 'profile2-link'
     },
     {
@@ -65,7 +65,7 @@ const profiles = [
     },
     {
         profileImage: artistten,
-        caption: 'Profile 10',
+        caption: 'Katie May',
         link: 'profile2-link'
     },
     // Add more profile data for each slide (up to 10)
@@ -75,19 +75,19 @@ export default function Artists() {
     return (
         <div className="container-artists">
             <div className="artistanimation-container">
-        <Lottie animationData={animationData} loop autoplay
-        />
-      </div>
+                <Lottie animationData={animationData} loop autoplay
+                />
+            </div>
             <Swiper
                 modules={{ Swiper }}
                 spaceBetween={20}
                 slidesPerView={4}
                 grabCursor={true}
-                >
+            >
                 {
                     profiles.map(({ profileImage, caption, link }, index) => {
                         return (
-                            <SwiperSlide key={index} style={{height:'360px'}}>
+                            <SwiperSlide key={index} style={{ height: '360px' }}>
                                 <img src={profileImage} alt={caption} />
                                 <h3>{caption}</h3>
                                 <a href={link}>View This Artists Profile</a>
