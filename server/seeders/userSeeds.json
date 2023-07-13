@@ -13,5 +13,25 @@
         "username": "SamMart",
         "email": "sam3@gmail.com",
         "password": "password789"
+    },
+    {
+        "username": "TheThirstyCamel",
+        "email": "camel6@gmail.com",
+        "password": "testpassword1"
+    },
+    {
+        "username": "Cat",
+        "email": "cat2@gmail.com",
+        "password": "testpassword2"
+    },
+    {
+        "username": "T Dog",
+        "email": "tommy1@gmail.com",
+        "password": "testpassword3"
+    },
+    {
+        "username": "JakeTheSnake",
+        "email": "jake3@gmail.com",
+        "password": "testpassword4"
     }
 ]

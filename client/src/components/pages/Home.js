@@ -37,7 +37,7 @@ export default function Home() {
     ];
 
     return (
-        <div className= "home-container" style={{ display: 'block', width: 900, padding: 60 }}>
+        <div className= "home-container">
             <div className="homeanimation-container">
                 <Lottie animationData={animationData} 
                 loop 
@@ -54,8 +54,8 @@ export default function Home() {
                             alt="One"
                         />
                         <Carousel.Caption>
-                            <h3>Label for first slide</h3>
-                            <p>Sample Text for Image One</p>
+                            <h3>The Front</h3>
+                            <p>By: Ang_Rook</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={10000}>
@@ -65,8 +65,8 @@ export default function Home() {
                             alt="Two"
                         />
                         <Carousel.Caption>
-                            <h3>Label for second slide</h3>
-                            <p>Sample Text for Image Two</p>
+                            <h3>Morning</h3>
+                            <p>By: IvanS</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={10000}>
@@ -76,8 +76,8 @@ export default function Home() {
                             alt="Three"
                         />
                         <Carousel.Caption>
-                            <h3>Label for second slide</h3>
-                            <p>Sample Text for Image Two</p>
+                            <h3>Le Cirque</h3>
+                            <p>By: Georges</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={10000}>
@@ -87,8 +87,8 @@ export default function Home() {
                             alt="Four"
                         />
                         <Carousel.Caption>
-                            <h3>Label for second slide</h3>
-                            <p>Sample Text for Image Two</p>
+                            <h3>The Repast</h3>
+                            <p>By: Henri</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
@@ -99,7 +99,7 @@ export default function Home() {
                         return (
                             <div className="col">
                                 <div class="card text-bg-dark" key={index}>
-                                    <img src={artwork} class="card-img" alt="..." />
+                                    <img src={artwork} class="small-h-img" alt="..." />
                                     <div class="card-img-overlay">
                                         <h5 class="card-title">{title}</h5>
                                         <p class="card-text">By: {artist}</p>

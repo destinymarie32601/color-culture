@@ -76,8 +76,12 @@
   margin: 10px;
   font-family: "Poppins";
   text-align: center;
+  margin-bottom: -40px;
+}
 
-
+.single-card {
+  background-color: #222;
+  color: var(--color2);
 }
 
 .about-cards {
@@ -88,9 +92,16 @@
 .card-img {
   height: 410px; 
   object-fit: cover;
-  /*height: 100%;
-  max-width: 100%;
-  margin-left: -12px;*/
+  margin-left: -10px;
+}
+
+.small-h-img {
+  height: 410px; 
+  object-fit: cover;
+}
+
+.d-card-img {
+  margin-left: -10px;
 }
 
 .h-img {
@@ -98,11 +109,6 @@
   object-fit: cover;
 }
 
-.b-card-img {
-  height: 350px;
-  max-width: 100%;
-  margin-left: -12px;
-}
 
 .about-title {
   margin-left: -10px;
