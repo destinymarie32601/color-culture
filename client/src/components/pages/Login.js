@@ -101,7 +101,15 @@ const Login = (props) => {
                 <Lottie animationData={animationData} loop autoplay
                 />
             </div>
-            <div className='container' style={{ width: '600px', margin: '20px auto', border: '1px solid #ccc', borderRadius: '4px', padding: '10px' }}>
+            <div className='container'
+                style={{
+                    width: '600px',
+                    margin: '150px auto',
+                    border: '1px solid #ccc',
+                    borderRadius: '50px',
+                    padding: '10px',
+                    background: '#16171b'
+                }}>
                 <Tab.Container activeKey={activeTab} onSelect={handleTabSelect}>
                     <Nav varient='tabs' style={{ width: '100%', justifyContent: 'center' }}>
                         <Nav.Item>
@@ -110,7 +118,8 @@ const Login = (props) => {
                                 border: '1px solid #ccc',
                                 borderRadius: '4px',
                                 padding: '10px 20px',
-                                background: activeTab === 'login' ? '#f0f0f0' : 'transparent',
+                                background: activeTab === 'login' ? '#A0A0A0' : 'transparent',
+                                color: activeTab === 'login' ? '#000' : '#f8f8f8',
                                 fontWeight: activeTab === 'login' ? 'bold' : 'normal',
                             }}>Login</Nav.Link>
                         </Nav.Item>
@@ -120,7 +129,8 @@ const Login = (props) => {
                                 border: '1px solid #ccc',
                                 borderRadius: '4px',
                                 padding: '10px 20px',
-                                background: activeTab === 'signup' ? '#f0f0f0' : 'transparent',
+                                background: activeTab === 'signup' ? '#A0A0A0' : 'transparent',
+                                color: activeTab === 'signup' ? '#000' : '#f8f8f8',
                                 fontWeight: activeTab === 'signup' ? 'bold' : 'normal',
                             }}>Sign Up</Nav.Link>
                         </Nav.Item>
@@ -129,22 +139,24 @@ const Login = (props) => {
                         <Tab.Pane eventKey='login'>
                             <Form onSubmit={handleLoginSubmit}>
                                 <Form.Group size='lg' controlId='login-email'>
-                                    <Form.Label>Email</Form.Label>
+                                    <Form.Label style={{ color: '#f8f8f8' }}>Email</Form.Label>
                                     <Form.Control
                                         autoFocus
                                         name='email'
                                         type='text'
                                         value={loginState.email}
                                         onChange={handleloginChange}
+                                        style={{ width: '100%' }}
                                     />
                                 </Form.Group>
                                 <Form.Group size='lg' controlId='login-password'>
-                                    <Form.Label>Password</Form.Label>
+                                    <Form.Label style={{ color: '#f8f8f8' }}>Password</Form.Label>
                                     <Form.Control
                                         name='password'
                                         type='password'
                                         value={loginState.password}
                                         onChange={handleloginChange}
+                                        style={{ width: '100%' }}
                                     />
                                 </Form.Group>
                                 <Button size='lg' type='submit' style={{ marginTop: '20px', marginBottom: '20px' }}>
@@ -155,7 +167,7 @@ const Login = (props) => {
                         <Tab.Pane eventKey='signup'>
                             <Form onSubmit={handleSignUpSubmit}>
                                 <Form.Group size='lg' controlId='signup-username'>
-                                    <Form.Label>Username</Form.Label>
+                                    <Form.Label style={{ color: '#f8f8f8' }}>Username</Form.Label>
                                     <Form.Control
                                         autoFocus
                                         name='username'
@@ -165,7 +177,7 @@ const Login = (props) => {
                                     />
                                 </Form.Group>
                                 <Form.Group size='lg' controlId='singup-email'>
-                                    <Form.Label>Email</Form.Label>
+                                    <Form.Label style={{ color: '#f8f8f8' }}>Email</Form.Label>
                                     <Form.Control
                                         name='email'
                                         type='email'
@@ -174,7 +186,7 @@ const Login = (props) => {
                                     />
                                 </Form.Group>
                                 <Form.Group size='lg' controlId='signup-password'>
-                                    <Form.Label>Password</Form.Label>
+                                    <Form.Label style={{ color: '#f8f8f8' }}>Password</Form.Label>
                                     <Form.Control
                                         name='password'
                                         type='password'
