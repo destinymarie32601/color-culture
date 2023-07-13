@@ -14,6 +14,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Lottie from 'lottie-react';
 import animationData from './images/animation_ljyvxowa.json';
+import { Link } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import { QUERY_USERS } from "../../utils/queries";
 
 // Install Swiper modules
 
@@ -72,36 +75,32 @@ const profiles = [
 ];
 
 export default function Artists() {
+    const { loading, data } = useQuery(QUERY_USERS);
+    const users = data?.users || [];
+
     return (
         <div className="container-artists">
             <div className="artistanimation-container">
-        <Lottie animationData={animationData} loop autoplay
-        />
-      </div>
+                <Lottie animationData={animationData} loop autoplay
+                />
+            </div>
             <Swiper
                 modules={{ Swiper }}
                 spaceBetween={20}
                 slidesPerView={4}
                 grabCursor={true}
-                >
-                {
-                    profiles.map(({ profileImage, caption, link }, index) => {
+            >
+                {users &&
+                    users.map((user => {
                         return (
-                            <SwiperSlide key={index} style={{height:'360px'}}>
-                                <img src={profileImage} alt={caption} />
-                                <h3>{caption}</h3>
-                                <a href={link}>View This Artists Profile</a>
+                            <SwiperSlide key={user._id} style={{ height: '360px' }}>
+                                <h3>{user.username}</h3>
+                                <a href={`/users/${user._id}`}>View This Artists Profile</a>
                             </SwiperSlide>
                         )
                     })
-                }
+                    )}
             </Swiper>
         </div>
     );
 }
-
-
-
-
-
-
