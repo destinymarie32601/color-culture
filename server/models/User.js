@@ -20,13 +20,6 @@ const userSchema = new Schema(
         required: true,
         unique: true
     },
-
-    artworks: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: ''
-        }
-    ],
 },
 {
     toJSON: {
