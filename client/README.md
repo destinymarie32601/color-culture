@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Color Culture
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This is a work in progress React application, for artists and art enthusiasts, to have their own platform to connect, browse, buy and sell art work. This application uses React JS, React-Bootstrap, Lottie-React, Bootstrap, Swiper, and MongoDB. This application was created by Alfredo Jimenez, Blake Edwards, David Rodriguez,and Destiny Dardon. This concept of this application was to create a unique and individual app for every day artists, and every day art consumers. This application will definitely improve with future development, adding more functionality, and creating a social media esque for artists/users everywhere. 
 
-## Available Scripts
+## Usage 
+The user can swipe through different art pieces on the home page. They can browse through a gallery-like page and pick their favorite art pieces. The user can browse through different profiles on the artists page, and with future development, they will see a social media set up with a 3d Swiper, of artists photos and their profile link. With future development, the user will be able to search for their favorite artists by first and last name on the search page, access their profile and see different commission packages the artist offers, along with a mini portfolio example of their work. With future development, the user will be able to log in, and access their own personal profile, and will be able to sell their art as well.  With future development, the user will be able to add items to their cart as well as contact, comment and like different art pieces/art profiles. Our group intends to finish this application to ensure a smooth and functional application. 
 
-In the project directory, you can run:
+## Links 
+Github Repo: https://github.com/destinymarie32601/color-culture 
+Live Website: https://agile-sands-25127-bd108b7da8b9.herokuapp.com/ 
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Website Screenshots 
+![Alt Text](/client/src/assets/)
+![Alt Text](/client/src/assets/)
+![Alt Text](/client/src/assets/)
+![Alt Text](/client/src/assets/)
+![Alt Text](/client/src/assets/)
+![Alt Text](/client/src/assets/)
