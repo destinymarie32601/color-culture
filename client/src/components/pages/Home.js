@@ -37,7 +37,7 @@ export default function Home() {
     ];
 
     return (
-        <div className= "home-container">
+        <div className= "home-container" >
             <div className="homeanimation-container">
                 <Lottie animationData={animationData} 
                 loop 

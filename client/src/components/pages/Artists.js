@@ -23,22 +23,22 @@ import { QUERY_USERS } from "../../utils/queries";
 const profiles = [
     {
         profileImage: artistone,
-        caption: 'Profile 1',
+        caption: 'James Grant',
         link: 'profile1-link'
     },
     {
         profileImage: artisttwo,
-        caption: 'Profile 2',
+        caption: 'Maria Aldean',
         link: 'profile2-link'
     },
     {
         profileImage: artistthree,
-        caption: 'Profile 3',
+        caption: '',
         link: 'profile2-link'
     },
     {
         profileImage: artistfour,
-        caption: 'Profile 4',
+        caption: 'Assandra Rodriguez',
         link: 'profile2-link'
     },
     {
@@ -68,7 +68,7 @@ const profiles = [
     },
     {
         profileImage: artistten,
-        caption: 'Profile 10',
+        caption: 'Katie May',
         link: 'profile2-link'
     },
     // Add more profile data for each slide (up to 10)
