@@ -41,7 +41,7 @@ class AuthService {
     logout() {
         // Clear user token and profile data from localStorage
         localStorage.removeItem('id_token');
-        window.location.reload();
+        window.location.reload('/');
     }
 }
 
