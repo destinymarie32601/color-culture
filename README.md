@@ -11,14 +11,14 @@ Github Repo: https://github.com/destinymarie32601/color-culture
 Live Website: https://agile-sands-25127-bd108b7da8b9.herokuapp.com/ 
 
 ## Website Screenshots 
-![Alt Text](/client/src/assets/screenshot1.png)
-![Alt Text](/client/src/assets/screenshot2.png)
-![Alt Text](/client/src/assets/screenshot3.png)
-![Alt Text](/client/src/assets/screenshot4.png)
-![Alt Text](/client/src/assets/screenshot5.png)
-![Alt Text](/client/src/assets/screenshot6.png)
-![Alt Text](/client/src/assets/screenshot7.png)
-![Alt Text](/client/src/assets/screenshot8.png)
+![Alt Text](/client/src/assets/images/screenshot1.png)
+![Alt Text](/client/src/assets/images/screenshot2.png)
+![Alt Text](/client/src/assets/images/screenshot3.png)
+![Alt Text](/client/src/assets/images/screenshot4.png)
+![Alt Text](/client/src/assets/images/screenshot5.png)
+![Alt Text](/client/src/assets/images/screenshot6.png)
+![Alt Text](/client/src/assets/images/screenshot7.png)
+![Alt Text](/client/src/assets/images/screenshot8.png)
 
 ## Contributions 
 Blake Edwards : https://www.linkedin.com/in/blake-edwards-ab6b51126/ 
